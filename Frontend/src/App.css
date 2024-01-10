@@ -1,0 +1,117 @@
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #080c0f, #e74c3c);
+  animation: gradientAnimation 10s infinite alternate;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
+.card-container {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(164, 8, 8, 0.1);
+  padding: 20px;
+  width: 400px;
+}
+
+/* Center the subscription form */
+.subscription-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+/* Style for the subscription form */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+label {
+  margin: 10px 0;
+  text-align: left;
+  width: 100%;
+  color: #bb9457; /* Dark blue color for labels */
+}
+
+input,
+select,
+#card-element {
+  margin-bottom: 15px;
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  color: #2c3e50; /* Dark gray color for text input */
+}
+
+button {
+  background-color: #27ae60;
+  color: #fff;
+  padding: 10px;
+  cursor: pointer;
+  border: none;
+  width: 100%;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+button:disabled {
+  background-color:#2ecc71;
+  cursor: not-allowed;
+}
+
+/* Card details styling */
+.react-credit-card__card {
+  position: relative;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  margin: 20px auto;
+}
+
+.react-credit-card__number,
+.react-credit-card__name,
+.react-credit-card__expiry-cvc {
+  margin-bottom: 15px;
+  color:#bb9457 ; /* Dark gray color for text input */
+}
+
+.react-credit-card__expiry-cvc {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+/* Error and success message styling */
+p {
+  margin-top: 15px;
+  font-size: 14px;
+  text-align: center;
+}
+
+p.error {
+  color: #e74c3c;
+}
+
+p.success {
+  color: #2ecc71;
+}
