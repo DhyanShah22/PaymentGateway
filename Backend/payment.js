@@ -1,7 +1,6 @@
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY)
 require('dotenv').config()
 
-
 const createCustomer = async (req,res) => {
     
     const {email,payment_method_token,subscription_interval} = req.body;
